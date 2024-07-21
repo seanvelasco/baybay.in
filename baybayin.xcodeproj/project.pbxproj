@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1431254F2C4AC5C700B6FF7C /* LessonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431254E2C4AC5C600B6FF7C /* LessonsView.swift */; };
+		143125512C4AE66900B6FF7C /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143125502C4AE66900B6FF7C /* LessonView.swift */; };
+		143125532C4B106800B6FF7C /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143125522C4B106800B6FF7C /* DictionaryView.swift */; };
+		143125572C4B247F00B6FF7C /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143125562C4B247F00B6FF7C /* PracticeView.swift */; };
+		1441AE462C2B3B17009D24CB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1441AE452C2B3B17009D24CB /* SettingsView.swift */; };
 		149418B92BF3EA000008CA86 /* baybayinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149418B82BF3EA000008CA86 /* baybayinApp.swift */; };
 		149418BB2BF3EA000008CA86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149418BA2BF3EA000008CA86 /* ContentView.swift */; };
 		149418BD2BF3EA020008CA86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 149418BC2BF3EA020008CA86 /* Assets.xcassets */; };
@@ -34,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1431254E2C4AC5C600B6FF7C /* LessonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsView.swift; sourceTree = "<group>"; };
+		143125502C4AE66900B6FF7C /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
+		143125522C4B106800B6FF7C /* DictionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryView.swift; sourceTree = "<group>"; };
+		143125562C4B247F00B6FF7C /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
+		1441AE452C2B3B17009D24CB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		149418B52BF3EA000008CA86 /* baybayin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baybayin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		149418B82BF3EA000008CA86 /* baybayinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baybayinApp.swift; sourceTree = "<group>"; };
 		149418BA2BF3EA000008CA86 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		144B08FA2C303B1200F71868 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1441AE452C2B3B17009D24CB /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		149418AC2BF3E9FF0008CA86 = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +112,13 @@
 		149418B72BF3EA000008CA86 /* baybayin */ = {
 			isa = PBXGroup;
 			children = (
+				144B08FA2C303B1200F71868 /* Settings */,
 				149418B82BF3EA000008CA86 /* baybayinApp.swift */,
 				149418BA2BF3EA000008CA86 /* ContentView.swift */,
+				143125522C4B106800B6FF7C /* DictionaryView.swift */,
+				143125562C4B247F00B6FF7C /* PracticeView.swift */,
+				1431254E2C4AC5C600B6FF7C /* LessonsView.swift */,
+				143125502C4AE66900B6FF7C /* LessonView.swift */,
 				149418BC2BF3EA020008CA86 /* Assets.xcassets */,
 				149418BE2BF3EA020008CA86 /* Preview Content */,
 			);
@@ -258,6 +281,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				149418BB2BF3EA000008CA86 /* ContentView.swift in Sources */,
+				1441AE462C2B3B17009D24CB /* SettingsView.swift in Sources */,
+				143125512C4AE66900B6FF7C /* LessonView.swift in Sources */,
+				1431254F2C4AC5C700B6FF7C /* LessonsView.swift in Sources */,
+				143125572C4B247F00B6FF7C /* PracticeView.swift in Sources */,
+				143125532C4B106800B6FF7C /* DictionaryView.swift in Sources */,
 				149418B92BF3EA000008CA86 /* baybayinApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

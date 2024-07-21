@@ -9,13 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Mabuhay Pilipinas")
+        TabView {
+            Group {
+                LessonsView().tabItem {
+                    Label("Learn", systemImage: "graduationcap.fill")
+                }
+                PracticeView().tabItem {
+                    Label("Practice", systemImage: "book.fill")
+                }
+                DictionaryView().tabItem {
+                    Label("Words", systemImage: "bookmark.fill")
+                }
+                SettingsView().tabItem {
+                    Label("More", systemImage: "ellipsis.circle.fill")
+                }
+            }
+            .toolbarBackground(.visible, for: .tabBar)
+            .toolbarBackground(.black, for: .tabBar)
         }
-        .padding()
     }
 }
 

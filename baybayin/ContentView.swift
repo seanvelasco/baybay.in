@@ -7,27 +7,31 @@
 
 import SwiftUI
 
+extension Color {
+    static let background = Color(red: 20/255, green: 31/255, blue: 37/255)
+    static let button = Color(red: 73/255, green: 192/255, blue: 248/255)
+}
 struct ContentView: View {
     var body: some View {
         TabView {
-            Group {
-                LessonsView().tabItem {
-                    Label("Learn", systemImage: "graduationcap.fill")
-                }
-                PracticeView().tabItem {
-                    Label("Practice", systemImage: "book.fill")
-                }
-                DictionaryView().tabItem {
-                    Label("Words", systemImage: "bookmark.fill")
-                }
-                SettingsView().tabItem {
-                    Label("More", systemImage: "ellipsis.circle.fill")
-                }
+            LessonsView(lessons: [Lesson(title: "Engrish", progress: 0.5)]).tabItem {
+                Label("Learn", systemImage: "graduationcap.fill")
+            }
+            PracticeView().tabItem {
+                Label("Practice", systemImage: "book.fill")
+            }
+            DictionaryView().tabItem {
+                Label("Words", systemImage: "bookmark.fill")
+            }
+            SettingsView().tabItem {
+                Label("More", systemImage: "ellipsis.circle.fill")
             }
             .toolbarBackground(.visible, for: .tabBar)
-            .toolbarBackground(.black, for: .tabBar)
+            .toolbarBackground(Color.background, for: .tabBar)
+            
         }
     }
+    
 }
 
 #Preview {

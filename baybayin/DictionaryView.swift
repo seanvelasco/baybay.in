@@ -77,7 +77,6 @@ import SwiftUI
 
 struct DictionaryView: View {
     var body: some View {
-        NavigationStack {
             ScrollView {
                 VStack(alignment: .center, spacing: 20) {
                     Text("Get to know one of the pre-colonial writing scripts used by early Filipinos")
@@ -114,7 +113,7 @@ struct DictionaryView: View {
                 }
             }
             .navigationTitle("Baybayin symbols")
-        }
+        
     }
 }
 

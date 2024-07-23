@@ -31,22 +31,28 @@ struct CourseProgressView: View {
 }
 
 struct LessonRowView: View {
+    @State private var isLessonViewPresented = false
     var lesson: Lesson
     var started = false
     var unlocked = false
     var body: some View {
-        VStack(alignment: .center) {
-            Circle()
-                .fill(.gray)
-                .padding(4)
-                .overlay{
-                    Circle()
-                        .stroke(.gray.opacity(0.4), lineWidth: 4)
-                }
-                .frame(width: 80, height: 80)
-            Text("Introduction")
-                .font(.headline)
-                .foregroundColor(.secondary)
+        Button(action: { isLessonViewPresented = true }) {
+            VStack(alignment: .center) {
+                Circle()
+                    .fill(.gray)
+                    .padding(4)
+                    .overlay{
+                        Circle()
+                            .stroke(.gray.opacity(0.4), lineWidth: 4)
+                    }
+                    .frame(width: 80, height: 80)
+                Text("Introduction")
+                    .font(.headline)
+                    .foregroundColor(.secondary)
+            }
+        }
+        .fullScreenCover(isPresented: $isLessonViewPresented) {
+            LessonView()
         }
     }
 }
@@ -57,9 +63,8 @@ struct LessonsGridView: View {
         ScrollView {
             LazyVStack(alignment: .center, spacing: 40) {
                 ForEach(lessons) { lesson in
-                    NavigationLink(destination: LessonView()) {
-                        LessonRowView(lesson: lesson)
-                    }
+                    LessonRowView(lesson: lesson)
+                    
                 }
             }
             .padding(40)
@@ -70,24 +75,29 @@ struct LessonsGridView: View {
 struct LessonsView: View {
     var lessons: [Lesson] = []
     var body: some View {
-        NavigationStack {
-            LessonsGridView(lessons: lessons)
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Text("baybay.in")
-                            .font(.title2)
-                            .fontWeight(.semibold)
+            NavigationStack {
+                LessonsGridView(lessons: lessons)
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            Text("baybay.in")
+                                .font(.title2)
+                                .fontWeight(.semibold)
+                        }
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            CourseProgressView(completed: lessons.count, total: lessons.count)
+                        }
                     }
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        CourseProgressView(completed: lessons.count, total: lessons.count)
-                    }
-                }
-                .toolbarBackground(.visible, for: .navigationBar)
-                .toolbarBackground(.black, for: .navigationBar)
-        }
+                    .toolbarBackground(.visible, for: .navigationBar)
+                    .toolbarBackground(Color.background, for: .navigationBar)
+                    .background(Color.background)
+            }
+        
     }
 }
 
 #Preview {
-    LessonsView()
+    LessonsView(lessons: [Lesson(
+        title:  "asd",
+        progress: 0.5
+    )])
 }

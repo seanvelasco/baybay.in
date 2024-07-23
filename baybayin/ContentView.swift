@@ -14,22 +14,27 @@ extension Color {
 struct ContentView: View {
     var body: some View {
         TabView {
-            LessonsView(lessons: [Lesson(title: "Engrish", progress: 0.5)]).tabItem {
-                Label("Learn", systemImage: "graduationcap.fill")
-            }
-            PracticeView().tabItem {
-                Label("Practice", systemImage: "book.fill")
-            }
-            DictionaryView().tabItem {
-                Label("Words", systemImage: "bookmark.fill")
-            }
-            SettingsView().tabItem {
-                Label("More", systemImage: "ellipsis.circle.fill")
+            Group {
+                LessonsView(lessons: [Lesson(title: "Engrish", progress: 0.5)]).tabItem {
+                    Label("Learn", systemImage: "house.fill")
+                }
+                PracticeView().tabItem {
+                    Label("Practice", systemImage: "book.fill")
+                }
+                StoriesView().tabItem {
+                    Label("Stories", systemImage: "books.vertical.fill")
+                }
+                TranslateView().tabItem {
+                    Label("Translate", systemImage: "translate")
+                }
+                SettingsView().tabItem {
+                    Label("More", systemImage: "ellipsis.circle.fill")
+                }
             }
             .toolbarBackground(.visible, for: .tabBar)
             .toolbarBackground(Color.background, for: .tabBar)
-            
         }
+        .accentColor(Color.button)
     }
     
 }

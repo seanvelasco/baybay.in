@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1417F7742C4FD7B400EAE70D /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1417F7732C4FD7B400EAE70D /* StoriesView.swift */; };
+		1417F7782C4FE01100EAE70D /* TranslateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1417F7772C4FE01000EAE70D /* TranslateView.swift */; };
 		1431254F2C4AC5C700B6FF7C /* LessonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431254E2C4AC5C600B6FF7C /* LessonsView.swift */; };
 		143125512C4AE66900B6FF7C /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143125502C4AE66900B6FF7C /* LessonView.swift */; };
 		143125532C4B106800B6FF7C /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143125522C4B106800B6FF7C /* DictionaryView.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1417F7732C4FD7B400EAE70D /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
+		1417F7772C4FE01000EAE70D /* TranslateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TranslateView.swift; path = baybayinUITests/TranslateView.swift; sourceTree = SOURCE_ROOT; };
 		1431254E2C4AC5C600B6FF7C /* LessonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsView.swift; sourceTree = "<group>"; };
 		143125502C4AE66900B6FF7C /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
 		143125522C4B106800B6FF7C /* DictionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryView.swift; sourceTree = "<group>"; };
@@ -112,12 +116,14 @@
 		149418B72BF3EA000008CA86 /* baybayin */ = {
 			isa = PBXGroup;
 			children = (
+				1417F7772C4FE01000EAE70D /* TranslateView.swift */,
 				144B08FA2C303B1200F71868 /* Settings */,
 				149418B82BF3EA000008CA86 /* baybayinApp.swift */,
 				149418BA2BF3EA000008CA86 /* ContentView.swift */,
 				143125522C4B106800B6FF7C /* DictionaryView.swift */,
 				143125562C4B247F00B6FF7C /* PracticeView.swift */,
 				1431254E2C4AC5C600B6FF7C /* LessonsView.swift */,
+				1417F7732C4FD7B400EAE70D /* StoriesView.swift */,
 				143125502C4AE66900B6FF7C /* LessonView.swift */,
 				149418BC2BF3EA020008CA86 /* Assets.xcassets */,
 				149418BE2BF3EA020008CA86 /* Preview Content */,
@@ -280,6 +286,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1417F7742C4FD7B400EAE70D /* StoriesView.swift in Sources */,
+				1417F7782C4FE01100EAE70D /* TranslateView.swift in Sources */,
 				149418BB2BF3EA000008CA86 /* ContentView.swift in Sources */,
 				1441AE462C2B3B17009D24CB /* SettingsView.swift in Sources */,
 				143125512C4AE66900B6FF7C /* LessonView.swift in Sources */,

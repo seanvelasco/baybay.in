@@ -30,7 +30,7 @@ struct CourseProgressView: View {
     }
 }
 
-struct LessonRowView: View {
+struct LessonItemView: View {
     @State private var isLessonViewPresented = false
     var lesson: Lesson
     var started = false
@@ -43,7 +43,7 @@ struct LessonRowView: View {
                     .padding(4)
                     .overlay{
                         Circle()
-                            .stroke(.gray.opacity(0.4), lineWidth: 4)
+                            .strokeBorder(.gray.opacity(0.4), lineWidth: 4)
                     }
                     .frame(width: 80, height: 80)
                 Text("Introduction")
@@ -63,7 +63,7 @@ struct LessonsGridView: View {
         ScrollView {
             LazyVStack(alignment: .center, spacing: 40) {
                 ForEach(lessons) { lesson in
-                    LessonRowView(lesson: lesson)
+                    LessonItemView(lesson: lesson)
                     
                 }
             }

@@ -8,8 +8,44 @@
 import SwiftUI
 
 struct TranslateView: View {
+    @State var text = ""
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            ScrollView {
+                VStack {
+                    VStack(alignment: .leading, spacing: 16) {
+                        TextEditor(text: $text)
+                            .scrollContentBackground(.hidden)
+                            .background(Color.background)
+                            .frame(minHeight: 40)
+                            .font(.title3)
+                        if text != "" {
+                            Divider()
+                            Text(text)
+                                .font(.title3)
+                                .frame(minHeight: 40)
+                            
+                        }
+                    }
+                    .padding()
+                    .cornerRadius(12)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 12)
+                            .strokeBorder(.separator, lineWidth: 1)
+                    )
+                }.padding()
+            }
+            .frame(maxHeight: .infinity)
+            .background(Color.background)
+            .navigationTitle("Translate")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Image(systemName: "bookmark.fill")
+                        
+                }
+            }
+        }
     }
 }
 

@@ -44,7 +44,7 @@ struct CharacterGridItemView: View {
         .cornerRadius(12)
         .overlay(
             RoundedRectangle(cornerRadius: 12)
-                .stroke(.separator, lineWidth: 2)
+                .strokeBorder(.separator, lineWidth: 2)
         )
 //        .cornerRadius(12)
         // .clipShape(RoundedRectangle(cornerRadius: 12))

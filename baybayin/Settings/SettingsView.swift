@@ -5,15 +5,11 @@
 //  Created by Sean Velasco on 6/26/24.
 //
 
-struct Profile: Hashable {
-    var id = UUID().uuidString
-    var name: String
-}
+
 
 import SwiftUI
 
 struct SettingsView: View {
-    private var profile = Profile(name: "Sean Velaco")
     var body: some View {
         NavigationStack {
             VStack {
@@ -53,6 +49,7 @@ struct SettingsView: View {
                             Text("Privacy")
                             Text("Acknowledgements")
                         }
+                        .listRowSeparator(.hidden)
                         .listRowInsets(EdgeInsets())
                         .listRowBackground(AppColor.background)
 //                        .textCase(.uppercase)
@@ -69,8 +66,10 @@ struct SettingsView: View {
                 .listStyle(.insetGrouped)
                 .scrollContentBackground(.hidden)
             }
-            .navigationTitle(profile.name)
+            .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(.visible, for: .navigationBar)
+            .toolbarBackground(AppColor.background, for: .navigationBar)
             .background(AppColor.background)
         }
     }

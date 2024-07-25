@@ -21,6 +21,7 @@
 		149418CA2BF3EA020008CA86 /* baybayinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149418C92BF3EA020008CA86 /* baybayinTests.swift */; };
 		149418D42BF3EA020008CA86 /* baybayinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149418D32BF3EA020008CA86 /* baybayinUITests.swift */; };
 		149418D62BF3EA020008CA86 /* baybayinUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149418D52BF3EA020008CA86 /* baybayinUITestsLaunchTests.swift */; };
+		149EB8C62C52FF3800D0C831 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149EB8C52C52FF3800D0C831 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		149418CF2BF3EA020008CA86 /* baybayinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baybayinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		149418D32BF3EA020008CA86 /* baybayinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baybayinUITests.swift; sourceTree = "<group>"; };
 		149418D52BF3EA020008CA86 /* baybayinUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baybayinUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		149EB8C52C52FF3800D0C831 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				1441AE452C2B3B17009D24CB /* SettingsView.swift */,
+				149EB8C52C52FF3800D0C831 /* ProfileView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			files = (
 				1417F7742C4FD7B400EAE70D /* StoriesView.swift in Sources */,
 				1417F7782C4FE01100EAE70D /* TranslateView.swift in Sources */,
+				149EB8C62C52FF3800D0C831 /* ProfileView.swift in Sources */,
 				149418BB2BF3EA000008CA86 /* ContentView.swift in Sources */,
 				1441AE462C2B3B17009D24CB /* SettingsView.swift in Sources */,
 				143125512C4AE66900B6FF7C /* LessonView.swift in Sources */,

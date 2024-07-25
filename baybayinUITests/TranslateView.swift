@@ -48,6 +48,8 @@ struct TranslateView: View {
             .background(AppColor.background)
             .navigationTitle("Translate")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(.visible, for: .navigationBar)
+            .toolbarBackground(AppColor.background, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Image(systemName: "bookmark.fill")

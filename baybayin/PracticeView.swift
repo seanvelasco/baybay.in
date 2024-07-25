@@ -30,15 +30,19 @@ struct CharacterGridItemView: View {
     var character: Character
     var body: some View {
         Button(action: {}) {
-            VStack(spacing: 8) {
-                Text(character)
-                    .foregroundColor(.white)
-                    .bold()
-                    .padding(4)
+            VStack(spacing: 4) {
+                VStack(spacing: 2) {
+                    Text(character)
+                        .foregroundColor(.white)
+                        .bold()
+                    Text(character)
+                        .foregroundColor(.white)
+                        .font(.caption)
+                }
+                .padding(4)
                 ProgressView(value: 0.5)
-                
-                
-            }        }
+            }
+        }
         .frame(maxWidth: .infinity)
         .padding(8)
         .cornerRadius(12)
@@ -46,7 +50,7 @@ struct CharacterGridItemView: View {
             RoundedRectangle(cornerRadius: 12)
                 .strokeBorder(.separator, lineWidth: 2)
         )
-//        .cornerRadius(12)
+        //        .cornerRadius(12)
         // .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }

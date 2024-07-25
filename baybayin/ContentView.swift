@@ -15,28 +15,32 @@ struct AppColor {
 }
 struct ContentView: View {
     var body: some View {
-        TabView {
-            Group {
-                LessonsView(lessons: [Lesson(title: "Engrish", progress: 0.5)]).tabItem {
-                    Label("Learn", systemImage: "house.fill")
+        ZStack {
+            AppColor.background
+                .ignoresSafeArea()
+            TabView {
+                Group {
+                    LessonsView(lessons: [Lesson(title: "Engrish", progress: 0.5)]).tabItem {
+                        Label("Learn", systemImage: "house")
+                    }
+                    PracticeView().tabItem {
+                        Label("Practice", systemImage: "character.phonetic")
+                    }
+                    StoriesView().tabItem {
+                        Label("Stories", systemImage: "book")
+                    }
+                    TranslateView().tabItem {
+                        Label("Translate", systemImage: "translate")
+                    }
+                    ProfileView().tabItem {
+                        Label("Me", systemImage: "person")
+                    }
                 }
-                PracticeView().tabItem {
-                    Label("Practice", systemImage: "book.fill")
-                }
-                StoriesView().tabItem {
-                    Label("Stories", systemImage: "books.vertical.fill")
-                }
-                TranslateView().tabItem {
-                    Label("Translate", systemImage: "translate")
-                }
-                SettingsView().tabItem {
-                    Label("More", systemImage: "ellipsis.circle.fill")
-                }
+                .toolbarBackground(.visible, for: .tabBar)
+                .toolbarBackground(AppColor.background, for: .tabBar)
             }
-            .toolbarBackground(.visible, for: .tabBar)
-            .toolbarBackground(AppColor.background, for: .tabBar)
+            .accentColor(AppColor.button)
         }
-        .accentColor(AppColor.button)
     }
     
 }

@@ -63,8 +63,8 @@ struct LessonView: View {
                 }
                 .toolbarTitleDisplayMode(.inline)
                 .toolbarBackground(.visible, for: .navigationBar)
-                .toolbarBackground(Color.background, for: .navigationBar)
-                .background(Color.background)
+                .toolbarBackground(AppColor.background, for: .navigationBar)
+                .background(AppColor.background)
         }
     }
 }

@@ -46,7 +46,7 @@ import SwiftUI
 //                            Text(tabs[index])
 //                                .padding(.vertical, 10)
 //                                .padding(.horizontal, 20)
-//                                .background(selectedTab == index ? Color.blue : Color.clear)
+//                                .background(selectedTab == index ? AppColor.blue : AppColor.clear)
 //                                .foregroundColor(selectedTab == index ? .white : .blue)
 //                                .cornerRadius(10)
 //                        }
@@ -87,7 +87,7 @@ struct DictionaryView: View {
                             .foregroundColor(.black)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .background(Color.blue)
+                            .background(.blue)
                             .cornerRadius(12)
                             .textCase(.uppercase)
                     }

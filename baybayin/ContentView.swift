@@ -7,8 +7,10 @@
 
 import SwiftUI
 
-extension Color {
+struct AppColor {
     static let background = Color(red: 20/255, green: 31/255, blue: 37/255)
+    static let secondary = Color(red: 32/255, green: 47/255, blue: 54/255)
+    static let tertiary = Color(red: 55/255, green: 70/255, blue: 79/255)
     static let button = Color(red: 73/255, green: 192/255, blue: 248/255)
 }
 struct ContentView: View {
@@ -32,9 +34,9 @@ struct ContentView: View {
                 }
             }
             .toolbarBackground(.visible, for: .tabBar)
-            .toolbarBackground(Color.background, for: .tabBar)
+            .toolbarBackground(AppColor.background, for: .tabBar)
         }
-        .accentColor(Color.button)
+        .accentColor(AppColor.button)
     }
     
 }

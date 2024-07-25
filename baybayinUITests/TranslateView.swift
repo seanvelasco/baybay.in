@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct TranslateView: View {
-    @State var text = ""
+    @State private var text = ""
+    @State private var showCopyMessage = false
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -16,15 +17,23 @@ struct TranslateView: View {
                     VStack(alignment: .leading, spacing: 16) {
                         TextEditor(text: $text)
                             .scrollContentBackground(.hidden)
-                            .background(Color.background)
+                            .background(AppColor.background)
                             .frame(minHeight: 40)
                             .font(.title3)
                         if text != "" {
                             Divider()
                             Text(text)
+                                .onTapGesture {
+                                    UIPasteboard.general.string = text
+                                    withAnimation {
+                                        showCopyMessage = true
+                                    }
+                                }
+                                .onAppear {
+                                  
+                                }
                                 .font(.title3)
                                 .frame(minHeight: 40)
-                            
                         }
                     }
                     .padding()
@@ -36,13 +45,13 @@ struct TranslateView: View {
                 }.padding()
             }
             .frame(maxHeight: .infinity)
-            .background(Color.background)
+            .background(AppColor.background)
             .navigationTitle("Translate")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Image(systemName: "bookmark.fill")
-                        
+                    
                 }
             }
         }

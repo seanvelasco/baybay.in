@@ -75,8 +75,8 @@ struct CharacterGridView: View {
             .buttonStyle(.plain)
             .padding()
             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-            .background(Color.button)
-            .foregroundColor(Color.background)
+            .background(AppColor.button)
+            .foregroundColor(AppColor.background)
             .cornerRadius(12)
         }
     }
@@ -112,9 +112,9 @@ struct PracticeView: View {
                 }
                 .padding()
             }
-            .background(Color.background)
+            .background(AppColor.background)
             .toolbarBackground(.visible, for: .navigationBar)
-            .toolbarBackground(Color.background, for: .navigationBar)
+            .toolbarBackground(AppColor.background, for: .navigationBar)
             .navigationTitle("Baybayin")
             .navigationBarTitleDisplayMode(.inline)
         }

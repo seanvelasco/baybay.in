@@ -91,9 +91,9 @@ struct StoriesView: View {
             }
             .navigationTitle("Works")
             .toolbarBackground(.visible, for: .navigationBar)
-            .toolbarBackground(Color.background, for: .navigationBar)
+            .toolbarBackground(AppColor.background, for: .navigationBar)
 //            .navigationBarTitleDisplayMode(.inline)
-            .background(Color.background)
+            .background(AppColor.background)
         }
     }
 }

@@ -20,7 +20,7 @@ struct StoryView: View {
                 Image(.jewel)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 125, height: 125, alignment: .top)
+                    .frame(width: .infinity, height: 380, alignment: .top)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
                 Text(story.title)
                     .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
@@ -28,43 +28,50 @@ struct StoryView: View {
                     .bold()
                     .padding(.horizontal, 8)
                     .padding(.bottom, 8)
-
             }
         }
-        .frame(maxWidth: 150)
+        .frame(height: 400)
+        .containerRelativeFrame(.horizontal)
         .foregroundColor(.white)
         
     }
 }
 
 struct StoryCategory: View {
-    var title: String?
+    var title: String
     var stories: [Story]
     let columns = [
         GridItem(.flexible(), spacing: 12),
         GridItem(.flexible(), spacing: 12)
     ]
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            if (title != nil) {
-                Text("Stories")
-                    .font(.title3)
-                    .bold()
-            }
-            LazyVGrid(columns: columns, spacing: 24) {
-                ForEach(stories, id: \.self) { story in
-                    StoryView(story: story)
+        Section {
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 16) {
+                    ForEach(stories, id: \.self) { story in
+                        StoryView(story: story)
+                    }
                 }
+                .scrollTargetLayout()
             }
+            .scrollTargetBehavior(.viewAligned)
+            .contentMargins(20, for: .scrollContent)
+            .listRowInsets(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+        } header: {
+            Text(title)
+                .font(.title2)
+                .bold()
+                .padding(.top)
+                .padding(.horizontal)
         }
+        
     }
 }
 
 struct StoriesView: View {
     
     let documents = [
-        Story(title: "PH Consitution - Preamble"),
-        Story(title: "PH Consitution - Bill of Rights")
+        Story(title: "Panatang Makabayan")
     ]
     
     let stories = [
@@ -73,27 +80,24 @@ struct StoriesView: View {
     ]
     
     let songs = [
-        Story(title: ""),
-        Story(title: "")
+        Story(title: "Lupang Hinirang")
     ]
-
+    
     
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack {
-                    StoryCategory(stories: documents)
+                VStack(alignment: .leading) {
+                    StoryCategory(title: "Featured", stories: documents)
                     StoryCategory(title: "Stories", stories: stories)
-                    StoryCategory(title: "Songs", stories: documents)
+                    StoryCategory(title: "Songs", stories: songs)
                 }
-                .frame(maxWidth: .infinity)
-                .padding()
+                .navigationTitle("Works")
+                .toolbarBackground(.visible, for: .navigationBar)
+                .toolbarBackground(AppColor.background, for: .navigationBar)
+                .navigationBarTitleDisplayMode(.inline)
+                .background(AppColor.background)
             }
-            .navigationTitle("Works")
-            .toolbarBackground(.visible, for: .navigationBar)
-            .toolbarBackground(AppColor.background, for: .navigationBar)
-//            .navigationBarTitleDisplayMode(.inline)
-            .background(AppColor.background)
         }
     }
 }
@@ -101,10 +105,3 @@ struct StoriesView: View {
 #Preview {
     StoriesView()
 }
-
-
-//
-//        .overlay(
-//            RoundedRectangle(cornerRadius: 12)
-//                .strokeBorder(.separator, lineWidth: 1)
-//        )

@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-struct Lesson: Identifiable {
-    var id = UUID()
-    var title: String
-    var progress: Double
-}
 
 struct CourseProgressView: View {
     var completed: Int
@@ -64,7 +59,6 @@ struct LessonsGridView: View {
             LazyVStack(alignment: .center, spacing: 40) {
                 ForEach(lessons) { lesson in
                     LessonItemView(lesson: lesson)
-                    
                 }
             }
             .padding(40)

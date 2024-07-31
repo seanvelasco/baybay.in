@@ -92,13 +92,14 @@ struct StoriesView: View {
                     StoryCategory(title: "Stories", stories: stories)
                     StoryCategory(title: "Songs", stories: songs)
                 }
-                .navigationTitle("Works")
-                .toolbarBackground(.visible, for: .navigationBar)
-                .toolbarBackground(AppColor.background, for: .navigationBar)
-                .navigationBarTitleDisplayMode(.inline)
-                .background(AppColor.background)
             }
+            .background(AppColor.background)
+            .navigationTitle("Works")
+            .toolbarBackground(.visible, for: .navigationBar)
+            .toolbarBackground(AppColor.background, for: .navigationBar)
+            .navigationBarTitleDisplayMode(.inline)
         }
+        
     }
 }
 

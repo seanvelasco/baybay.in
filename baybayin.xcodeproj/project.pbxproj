@@ -22,6 +22,8 @@
 		149418D42BF3EA020008CA86 /* baybayinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149418D32BF3EA020008CA86 /* baybayinUITests.swift */; };
 		149418D62BF3EA020008CA86 /* baybayinUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149418D52BF3EA020008CA86 /* baybayinUITestsLaunchTests.swift */; };
 		149EB8C62C52FF3800D0C831 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149EB8C52C52FF3800D0C831 /* ProfileView.swift */; };
+		149EB8C82C55BA9400D0C831 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149EB8C72C55BA9400D0C831 /* Lesson.swift */; };
+		149EB8CA2C56166A00D0C831 /* LessonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149EB8C92C56166A00D0C831 /* LessonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		149418D32BF3EA020008CA86 /* baybayinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baybayinUITests.swift; sourceTree = "<group>"; };
 		149418D52BF3EA020008CA86 /* baybayinUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baybayinUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		149EB8C52C52FF3800D0C831 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		149EB8C72C55BA9400D0C831 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		149EB8C92C56166A00D0C831 /* LessonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 				1431254E2C4AC5C600B6FF7C /* LessonsView.swift */,
 				1417F7732C4FD7B400EAE70D /* StoriesView.swift */,
 				143125502C4AE66900B6FF7C /* LessonView.swift */,
+				149EB8C72C55BA9400D0C831 /* Lesson.swift */,
+				149EB8C92C56166A00D0C831 /* LessonViewModel.swift */,
 				149418BC2BF3EA020008CA86 /* Assets.xcassets */,
 				149418BE2BF3EA020008CA86 /* Preview Content */,
 			);
@@ -297,8 +303,10 @@
 				143125512C4AE66900B6FF7C /* LessonView.swift in Sources */,
 				1431254F2C4AC5C700B6FF7C /* LessonsView.swift in Sources */,
 				143125572C4B247F00B6FF7C /* PracticeView.swift in Sources */,
+				149EB8CA2C56166A00D0C831 /* LessonViewModel.swift in Sources */,
 				143125532C4B106800B6FF7C /* DictionaryView.swift in Sources */,
 				149418B92BF3EA000008CA86 /* baybayinApp.swift in Sources */,
+				149EB8C82C55BA9400D0C831 /* Lesson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

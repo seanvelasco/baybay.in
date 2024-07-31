@@ -52,7 +52,7 @@ struct TranslateView: View {
             .toolbarBackground(AppColor.background, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Image(systemName: "bookmark.fill")
+                    Image(systemName: "bookmark")
                     
                 }
             }

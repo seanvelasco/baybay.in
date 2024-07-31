@@ -12,6 +12,8 @@ struct AppColor {
     static let secondary = Color(red: 32/255, green: 47/255, blue: 54/255)
     static let tertiary = Color(red: 55/255, green: 70/255, blue: 79/255)
     static let button = Color(red: 73/255, green: 192/255, blue: 248/255)
+    static let buttonSuccess = Color(red: 147/255, green: 211/255, blue: 52/255)
+    static let buttonDisabled = Color(red: 57/255, green: 69/255, blue: 81/255)
 }
 struct ContentView: View {
     var body: some View {
